@@ -1,0 +1,5 @@
+S3method(corme,default)
+S3method(corme,formula)
+export(corme)
+import(Formula)
+import(lme4)

@@ -1,0 +1,13 @@
+Package: corme
+Version: 0.1
+Title: Grouped correlation with mixed effect models
+Description: Estimate correlation in grouped data using
+    linear mixed-effect models.
+Author: Daniel Schulman <danieljschulman@gmail.com>
+Maintainer: Daniel Schulman <danieljschulman@gmail.com>
+Imports:
+    lme4,
+    Formula
+License: BSD
+Collate:
+    'corme.r'
