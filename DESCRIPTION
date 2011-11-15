@@ -11,3 +11,4 @@ Imports:
 License: BSD
 Collate:
     'corme.r'
+    'data.r'
