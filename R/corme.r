@@ -152,8 +152,9 @@ corme.default <- function(g, x, y=NULL, REML=T, ...) {
 corme.formula <- function(formula, data, REML=T, ...) {
   f <- Formula(formula)
   stopifnot(length(f)[1] <= 1, length(f)[2] == 2)
-  y <- if (length(f)[1]==0) NULL else model.part(f, data, lhs=1)
-  x <- model.part(f, data, rhs=1)
-  g <- model.part(f, data, rhs=2, drop=T)
+  mf <- model.frame(f, data=data)
+  y <- if (length(f)[1]==0) NULL else model.part(f, mf, lhs=1)
+  x <- model.part(f, mf, rhs=1)
+  g <- model.part(f, mf, rhs=2, drop=T)
   corme.default(g, x, y, REML=REML, ...)
 }
